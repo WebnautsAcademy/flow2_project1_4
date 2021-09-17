@@ -1,0 +1,27 @@
+/* installation start */
+
+.article-list {
+    padding: 0;
+}
+
+.article-list__item {
+    list-style: none;
+    line-height: 40px;
+    margin: 16px 0;
+    padding-left: 57px;
+    background-color: #F2F2F2;
+}
+
+.article-list__item::before {
+    position: absolute;
+    content: "";
+    background-image: url("/img/arrow.svg");
+    background-position-y: center;
+    width: 20px;
+    height: 40px;
+    margin-left: -37px;
+    background-repeat: no-repeat;
+}
+
+
+/* installation end */
