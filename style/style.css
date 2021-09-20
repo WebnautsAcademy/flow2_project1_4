@@ -1,0 +1,128 @@
+a {
+    text-decoration: none;
+}
+
+.page-header {}
+
+.navigation-link {
+    font-family: Gilroy, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #20242D;
+}
+
+.active-nav-link {
+    color: #FF7129;
+}
+
+.header-wrapper-contacts {
+    background-color: #20242D;
+    color: #fff;
+    font-family: Gilroy, sans-serif;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.header-address {
+    font-style: normal;
+}
+
+.contact-link {
+    color: #fff;
+}
+
+.title {
+    font-family: Gilroy, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 97%;
+    color: #20242D;
+}
+
+.text-container {
+    font-family: Gilroy, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #20242D;
+}
+
+.page-footer {
+    background: #20242D;
+}
+
+/* index start */
+
+.welcome-section {
+    background-color: #5a6a81;
+}
+
+.main-title {
+    font-family: Gilroy, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 92px;
+    line-height: 111px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.welcome-text {
+    font-family: Gilroy, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.button {
+    background-color: #FF7129;
+    box-shadow: 0px 4px 28px rgba(255, 113, 41, 0.29);
+    font-family: Gilroy;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.article-section {}
+
+.img-wrapper {}
+
+/* index end */
+
+/* installation start */
+
+.article-list {
+    padding: 0;
+}
+
+.article-list__item {
+    list-style: none;
+    line-height: 40px;
+    margin: 16px 0;
+    padding-left: 57px;
+    background-color: #F2F2F2;
+}
+
+.article-list__item::before {
+    position: absolute;
+    content: "";
+    background-image: url("/img/arrow.svg");
+    background-position-y: center;
+    width: 20px;
+    height: 40px;
+    margin-left: -37px;
+    background-repeat: no-repeat;
+}
+
+/* installation end */
