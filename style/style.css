@@ -1,8 +1,33 @@
 a {
     text-decoration: none;
 }
-
-.page-header {}
+body {
+    margin: 0;
+}
+.page-header {
+    display: flex;
+    flex-direction: column;
+}
+.header-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 57px;
+    padding: 0 50px;
+}
+.navigation-list {
+    display: flex;
+}
+.navigation-list li {
+    list-style: none;
+    margin: 0 28px;
+}
+.navigation-list li:first-of-type {
+    margin-left: 0;
+}
+.navigation-list li:last-of-type {
+    margin-right: 0;
+}
 
 .navigation-link {
     font-family: Gilroy, sans-serif;
@@ -15,6 +40,25 @@ a {
 
 .active-nav-link {
     color: #FF7129;
+    position: relative;
+}
+.active-nav-link::before {
+    display: block;
+    width: 10px;
+    content: '';
+    position: absolute;
+    border-bottom: 1px solid #FF7129;
+    top: 50%;
+    left: -15px;
+}
+.active-nav-link::after {
+    display: block;
+    width: 10px;
+    content: '';
+    position: absolute;
+    border-bottom: 1px solid #FF7129;
+    top: 50%;
+    right: -15px;
 }
 
 .header-wrapper-contacts {
@@ -24,6 +68,13 @@ a {
     font-weight: normal;
     font-size: 12px;
     line-height: 14px;
+    justify-content: space-between;
+    height: auto;
+    padding: 10px 50px;
+    order: -1;
+}
+.contacts-wrapper {
+    justify-content: space-between;
 }
 
 .header-address {
@@ -32,6 +83,25 @@ a {
 
 .contact-link {
     color: #fff;
+    margin-left: 70px;
+}
+.contacts-wrapper a[href^="tel"]::before {
+    position: absolute;
+    content: '';
+    background: url("/img/phone.svg") no-repeat center;
+    width: 12px;
+    height: 12px;
+    margin-left: -15px;
+    margin-top: 2px;
+}
+.contacts-wrapper a[href^="mailto"]::before {
+    position: absolute;
+    content: '';
+    background: url("/img/email.svg") no-repeat center;
+    width: 12px;
+    height: 12px;
+    margin-left: -15px;
+    margin-top: 2px;
 }
 
 .title {
@@ -41,6 +111,16 @@ a {
     font-size: 48px;
     line-height: 97%;
     color: #20242D;
+    padding-left: 15px;
+}
+
+.title::before {
+    content: '';
+    display: block;
+    border-left: 1px solid #FF7129;
+    height: 52px;
+    position: absolute;
+    margin-left: -15px;
 }
 
 .text-container {
@@ -51,15 +131,64 @@ a {
     line-height: 24px;
     color: #20242D;
 }
+.text-container span {
+    display: inline-block;
+    margin: 0 0 15px 0;
+}
 
 .page-footer {
     background: #20242D;
+    display: flex;
+    flex-direction: column;
 }
-
+.page-footer__contacts {
+    border-bottom: 1px solid #7B7E85;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+}
+.page-footer .navigation-link {
+    color: #fff;
+}
+.page-footer .active-footer-link {
+    color: #FF7129;
+}
+.page-footer__links {
+    display: flex;
+    justify-content: space-between;
+    padding: 24px 50px;
+}
+.page-footer__links a {
+    font-family: Gilroy, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #7B7E85;
+}
+.button-footer {
+    border: 1px solid #FF7129;
+    box-sizing: border-box;
+    filter: drop-shadow(0px 4px 28px rgba(255, 113, 41, 0.67));
+    background-color: transparent;
+    color: #fff;
+    width: 150px;
+    height: 50px;
+}
 /* index start */
 
 .welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background-color: #5a6a81;
+    background-image: url("/img/bg.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 844px;
 }
 
 .main-title {
@@ -70,6 +199,7 @@ a {
     line-height: 111px;
     text-align: center;
     color: #FFFFFF;
+    margin: 0;
 }
 
 .welcome-text {
@@ -92,11 +222,25 @@ a {
     line-height: 17px;
     text-align: center;
     color: #FFFFFF;
+    width: 190px;
+    height: 50px;
+    border: none;
 }
 
-.article-section {}
+.article-section {
+    display: flex;
+    width: 1200px;
+    margin: 100px auto;
+}
 
-.img-wrapper {}
+.img-wrapper {
+    width: 600px;
+    display: flex;
+}
+
+.article-description {
+    margin-left: 70px;
+}
 
 /* index end */
 
