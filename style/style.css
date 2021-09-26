@@ -1,13 +1,34 @@
+body {
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+* {
+    box-sizing: inherit;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.contact-main {
+    max-width: 1200px;
+    width: 1200px;
+    margin: 0 auto;
+}
+
 a {
     text-decoration: none;
 }
-body {
-    margin: 0;
-}
+
 .page-header {
     display: flex;
     flex-direction: column;
 }
+
 .header-wrapper {
     display: flex;
     align-items: center;
@@ -15,17 +36,17 @@ body {
     height: 57px;
     padding: 0 50px;
 }
+
 .navigation-list {
     display: flex;
 }
+
 .navigation-list li {
     list-style: none;
-    margin: 0 28px;
+    margin-right: 56px;
 }
-.navigation-list li:first-of-type {
-    margin-left: 0;
-}
-.navigation-list li:last-of-type {
+
+.navigation-list li:last-child {
     margin-right: 0;
 }
 
@@ -42,6 +63,7 @@ body {
     color: #FF7129;
     position: relative;
 }
+
 .active-nav-link::before {
     display: block;
     width: 10px;
@@ -51,6 +73,7 @@ body {
     top: 50%;
     left: -15px;
 }
+
 .active-nav-link::after {
     display: block;
     width: 10px;
@@ -73,35 +96,40 @@ body {
     padding: 10px 50px;
     order: -1;
 }
-.contacts-wrapper {
-    justify-content: space-between;
-}
 
-.header-address {
+
+.header-address,
+.contact-section address {
     font-style: normal;
+    margin-right: auto;
 }
 
 .contact-link {
     color: #fff;
+}
+
+.contact-link:last-of-type {
     margin-left: 70px;
 }
-.contacts-wrapper a[href^="tel"]::before {
+
+.header-wrapper-contacts a[href^="tel"]::before,
+.contact-section .phone-number::before {
     position: absolute;
     content: '';
     background: url("/img/phone.svg") no-repeat center;
-    width: 12px;
-    height: 12px;
-    margin-left: -15px;
-    margin-top: 2px;
+    width: 14px;
+    height: 14px;
+    margin-left: -23px;
 }
-.contacts-wrapper a[href^="mailto"]::before {
+
+.header-wrapper-contacts a[href^="mailto"]::before,
+.contact-section .email::before {
     position: absolute;
     content: '';
     background: url("/img/email.svg") no-repeat center;
-    width: 12px;
-    height: 12px;
-    margin-left: -15px;
-    margin-top: 2px;
+    width: 14px;
+    height: 14px;
+    margin-left: -23px;
 }
 
 .title {
@@ -123,7 +151,8 @@ body {
     margin-left: -15px;
 }
 
-.text-container {
+.text-container,
+.article {
     font-family: Gilroy, sans-serif;
     font-style: normal;
     font-weight: normal;
@@ -131,6 +160,7 @@ body {
     line-height: 24px;
     color: #20242D;
 }
+
 .text-container span {
     display: inline-block;
     margin: 0 0 15px 0;
@@ -141,6 +171,7 @@ body {
     display: flex;
     flex-direction: column;
 }
+
 .page-footer__contacts {
     border-bottom: 1px solid #7B7E85;
     display: flex;
@@ -148,17 +179,21 @@ body {
     align-items: center;
     padding: 50px;
 }
+
 .page-footer .navigation-link {
     color: #fff;
 }
+
 .page-footer .active-footer-link {
     color: #FF7129;
 }
+
 .page-footer__links {
     display: flex;
     justify-content: space-between;
     padding: 24px 50px;
 }
+
 .page-footer__links a {
     font-family: Gilroy, sans-serif;
     font-style: normal;
@@ -167,6 +202,7 @@ body {
     line-height: 14px;
     color: #7B7E85;
 }
+
 .button-footer {
     border: 1px solid #FF7129;
     box-sizing: border-box;
@@ -176,9 +212,12 @@ body {
     width: 150px;
     height: 50px;
 }
+
 /* index start */
 
-.welcome-section {
+.welcome-section,
+.about-welcome,
+.installation-banner {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -244,7 +283,75 @@ body {
 
 /* index end */
 
+/* about start */
+.about-welcome {
+    background-image: url("/img/about_bg.jpg");
+    height: 350px;
+    justify-content: flex-start;
+}
+
+.about-welcome .title {
+    color: #fff;
+    width: 1200px;
+    margin: 200px 0 0 0;
+}
+
+.about-description {
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+}
+
+.about-description__left,
+.about-description__right {
+    flex-basis: 600px;
+}
+
+.about-description p {
+    width: 534px;
+}
+
+/* about end */
+
 /* installation start */
+
+.installation-banner {
+    background-image: url("/img/installation_bg.jpg");
+    height: 412px;
+}
+
+.installation-list {
+    width: 1200px;
+    margin: 120px auto;
+}
+
+.article {
+    width: 700px;
+    margin: 0 auto 64px;
+}
+
+.article .title {
+    font-size: 36px;
+    line-height: 42px;
+    margin-bottom: 32px;
+}
+
+.article .title::before {
+    height: 42px;
+}
+
+.article blockquote {
+    margin: 25px 0;
+    padding: 16px 24px;
+    background: #F5F5F5;
+    font-size: 20px;
+    line-height: 30px;
+    color: #20242D;
+}
+
+.article blockquote span {
+    color: #FF7129;
+}
 
 .article-list {
     padding: 0;
@@ -269,4 +376,78 @@ body {
     background-repeat: no-repeat;
 }
 
+.article__img-wrapper {
+    display: flex;
+    justify-content: space-between;
+}
+
+.article__img-wrapper div {
+    width: 335px;
+    height: 250px;
+    overflow: hidden;
+}
+
+.results {
+    background: #F2F2F2;
+    padding: 24px 32px;
+}
+
 /* installation end */
+
+/* contact start */
+
+.contact-section,
+.contact-section a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-family: Gilroy, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #20242D;
+}
+
+.contact-section p {
+    margin: 0;
+}
+
+.contact-wrapper {
+
+}
+
+.contact-name {
+    font-family: Gilroy, sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 19px;
+    color: #7B7E85;
+}
+
+.contact-section .address,
+.contact-section .email,
+.contact-section .phone-number {
+    padding-left: 24px;
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 54px;
+}
+
+.contact-section .address::before {
+    position: absolute;
+    content: '';
+    background: url("/img/maping.svg") no-repeat center;
+    width: 14px;
+    height: 18px;
+    margin-left: -23px;
+}
+
+.contact-section .email::before,
+.contact-section .phone-number::before {
+    height: 18px;
+}
+
+/* contact end */
