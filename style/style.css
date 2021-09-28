@@ -230,6 +230,22 @@ a {
     height: 844px;
 }
 
+.welcome-section__wrapper {
+    position: relative;
+}
+
+.welcome-section__wrapper::after {
+    position: absolute;
+    content: '';
+    
+}
+
+.welcome-section__wrapper::before {
+    position: absolute;
+    content: '';
+    background-image: url('/img/solar.png');
+}
+
 .main-title {
     font-family: Gilroy, sans-serif;
     font-style: normal;
