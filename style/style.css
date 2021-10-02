@@ -116,7 +116,7 @@ a {
 .contact-section .phone-number::before {
     position: absolute;
     content: '';
-    background: url("/img/phone.svg") no-repeat center;
+    background: url("../img/phone.svg") no-repeat center;
     width: 14px;
     height: 14px;
     margin-left: -23px;
@@ -126,7 +126,7 @@ a {
 .contact-section .email::before {
     position: absolute;
     content: '';
-    background: url("/img/email.svg") no-repeat center;
+    background: url("../img/email.svg") no-repeat center;
     width: 14px;
     height: 14px;
     margin-left: -23px;
@@ -223,7 +223,7 @@ a {
     align-items: center;
     justify-content: center;
     background-color: #5a6a81;
-    background-image: url("/img/bg.jpg");
+    background-image: url("../img/bg.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -246,7 +246,7 @@ a {
 .welcome-section__wrapper::before {
     position: absolute;
     content: '';
-    background-image: url('/img/solar.png');
+    background-image: url('../img/solar.png');
     
 }
 
@@ -305,7 +305,7 @@ a {
 
 /* about start */
 .about-welcome {
-    background-image: url("/img/about_bg.jpg");
+    background-image: url("../img/about_bg.jpg");
     height: 350px;
     justify-content: flex-start;
 }
@@ -336,7 +336,7 @@ a {
 /* installation start */
 
 .installation-banner {
-    background-image: url("/img/installation_bg.jpg");
+    background-image: url("../img/installation_bg.jpg");
     height: 412px;
 }
 
@@ -388,7 +388,7 @@ a {
 .article-list__item::before {
     position: absolute;
     content: "";
-    background-image: url("/img/arrow.svg");
+    background-image: url("../img/arrow.svg");
     background-position-y: center;
     width: 20px;
     height: 40px;
@@ -459,7 +459,7 @@ a {
 .contact-section .address::before {
     position: absolute;
     content: '';
-    background: url("/img/maping.svg") no-repeat center;
+    background: url("../img/maping.svg") no-repeat center;
     width: 14px;
     height: 18px;
     margin-left: -23px;
